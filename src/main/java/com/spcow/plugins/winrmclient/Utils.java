@@ -23,7 +23,7 @@ public class Utils {
         if (isRunningOnWindows(script)) {
             return new String[]{"powershell.exe", "-NonInteractive", "-ExecutionPolicy", "Bypass", "& \'" + script.getRemote() + "\'"};
         } else {
-            return new String[]{"powershell", "-NonInteractive", "& \'" + script.getRemote() + "\'"};
+            return new String[]{"pwsh", "-NonInteractive", "& \'" + script.getRemote() + "\'"};
         }
     }
 
